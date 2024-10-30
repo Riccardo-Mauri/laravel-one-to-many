@@ -15,5 +15,22 @@
                 </div>
             </div>
         </div>
+        <div>
+            <h1>Progetti</h1>
+            <a href="{{ route('admin.projects.create') }}" class="btn btn-primary">Crea Nuovo Progetto</a>
+            @if ($projects->isEmpty())
+                <p>Nessun progetto trovato.</p>
+            @else
+                <ul>
+                    @foreach ($projects as $project)
+                        <li>
+                            <a href="{{ route('admin.projects.show', $project->id) }}">
+                                {{ $project->title }}
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            @endif
+        </div>
     </div>
 @endsection

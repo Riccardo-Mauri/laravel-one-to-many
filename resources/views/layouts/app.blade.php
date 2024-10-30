@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>@yield('page-title') | {{ config('app.name', 'Laravel') }}</title>
+        <title>@yield('page-title')</title>
 
         <!-- Scripts -->
         @vite('resources/js/app.js')
@@ -23,6 +23,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a>
                             </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Link 2</a>
                             </li>
